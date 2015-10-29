@@ -1,0 +1,12 @@
+machine:
+  ruby:
+    version: 2.2.3
+
+dependencies:
+  pre:
+    - phantomjs --webdriver=8643:
+        background: true
+
+test:
+  override:
+    - bundle exec access_lint audit http://google.com
